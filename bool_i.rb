@@ -1,6 +1,6 @@
 class Integer
   def can_be_trippled?
-    !!(self % 3 == 0)
+    self % 3 == 0
   end
 end
 
