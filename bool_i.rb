@@ -1,11 +1,11 @@
 class Integer
-  def ddd
-    self % 3 == 0 ? true : false
+  def can_be_trippled?
+    !!(self % 3 == 0)
   end
 end
 
-puts 3.ddd #=> expect true
-puts 5.ddd #=> expect false
+puts 3.can_be_trippled? #=> expect true
+puts 5.can_be_trippled? #=> expect false
 
 def find(x, y)
   !y.grep(x).empty?
