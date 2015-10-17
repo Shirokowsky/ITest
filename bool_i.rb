@@ -1,20 +1,20 @@
 class Integer
   def ddd
-    x = self
-    x%3 == 0 ? true : false
+    self % 3 == 0 ? true : false
   end
 end
 
 puts 3.ddd #=> expect true
 puts 5.ddd #=> expect false
 
-def find2(x, y)
-  #(x.split & y).size != 0 ? true : false #=> just second variant
-  (x.split - y).empty?
+def find(x, y)
+  !y.grep(x).empty?
 end
 
-puts find2('foobar', ['foo','bar', 'foobar']) #=> expect  true
-puts find2('foobar', ['foo', 'bar', 'kremlin']) #=> expect false
+puts '** find test **'
+puts find('foobar something', ['foo','bar', 'foobar something']) #=> expect  true
+puts find('foobar something', ['foo', 'bar', 'kremlin']) #=> expect false
+puts '** find test end **'
 
 def yDrop(x, y)
   y.times do
